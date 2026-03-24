@@ -1,0 +1,16 @@
+# MAC OS
+*.DS_Store
+
+# editor files
+.vscode/
+.idea/
+
+# build
+build/
+/compile_commands.json
+
+# python
+.venv
+
+# misc
+CMakeUserPresets.json

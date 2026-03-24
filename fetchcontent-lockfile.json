@@ -1,0 +1,10 @@
+{
+  "dependencies": [
+    {
+      "name": "googletest",
+      "package_name": "GTest",
+      "git_repository": "https://github.com/google/googletest.git",
+      "git_tag": "v1.17.0"
+    }
+  ]
+}
