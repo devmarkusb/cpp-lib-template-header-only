@@ -47,7 +47,7 @@ Then `pre-commit` runs on commit; you can also run `pre-commit run -a` manually.
 
 1. Create your new repo (e.g. on GitHub).
 2. Copy everything except devenv, .git, and similar, from this template.
-3. Add https://github.com/devmarkusb/devenv as submodul, cf. README.md there.
+3. Add <https://github.com/devmarkusb/devenv> as submodule, cf. README.md there.
 4. Rename namespace and library names everywhere. See the top comment in `CMakeLists.txt` for what to change:
     - `MB_CPP_LIB_TEMPLATE_HEADER_ONLY` (CMake option prefix)
     - `cpp-lib-template-header-only` (project and target names)
@@ -57,8 +57,8 @@ Then `pre-commit` runs on commit; you can also run `pre-commit run -a` manually.
 
 ## CMake options
 
-| Option                               | Default             | Description                              |
-|--------------------------------------|---------------------|------------------------------------------|
+| Option                                           | Default             | Description                              |
+|--------------------------------------------------|---------------------|------------------------------------------|
 | `MB_CPP_LIB_TEMPLATE_HEADER_ONLY_BUILD_TESTS`    | `ON` when top-level | Build tests and test infra (GoogleTest). |
 | `MB_CPP_LIB_TEMPLATE_HEADER_ONLY_BUILD_EXAMPLES` | `ON` when top-level | Build example executables.               |
 
@@ -84,7 +84,8 @@ C++ standard is 26 (23 for MSVC). Compile commands are exported for tooling. A d
 
 ### `cmake/`
 
-- **`mb.cpp-lib-template-header-only-config.cmake.in`** — Template for the CMake config-file package (used when installing the
+- **`mb.cpp-lib-template-header-only-config.cmake.in`** — Template for the CMake config-file package (used when
+  installing the
   library so consumers can `find_package(mb.cpp-lib-template-header-only)`).
 
 ### `devenv/`
@@ -107,12 +108,14 @@ Development and CI support (often as a submodule):
 
 ### `include/`
 
-- **`mb/cpp-lib-template-header-only/`** — Public headers. Template ships a single header `cpp-lib-template-header-only.hpp` and an INTERFACE
+- **`mb/cpp-lib-template-header-only/`** — Public headers. Template ships a single header
+  `cpp-lib-template-header-only.hpp` and an INTERFACE
   library; headers are exposed via a FILE_SET.
 
 ### `src/`
 
-- **`cpp-lib-template-header-only/`** — Test sources (e.g. `cpp-lib-template-header-only.test.cpp` using GoogleTest). Built only when
+- **`cpp-lib-template-header-only/`** — Test sources (e.g. `cpp-lib-template-header-only.test.cpp` using GoogleTest).
+  Built only when
   `MB_CPP_LIB_TEMPLATE_HEADER_ONLY_BUILD_TESTS` is ON.
 
 ### Root files
