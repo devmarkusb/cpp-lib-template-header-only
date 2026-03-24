@@ -32,7 +32,10 @@ option(
 include(devenv/cmake/install-library-config.cmake)
 
 add_library(mb.cpp-lib-template-header-only INTERFACE)
-add_library(mb::cpp-lib-template-header-only ALIAS mb.cpp-lib-template-header-only)
+add_library(
+    mb::cpp-lib-template-header-only
+    ALIAS mb.cpp-lib-template-header-only
+)
 
 target_sources(
     mb.cpp-lib-template-header-only
