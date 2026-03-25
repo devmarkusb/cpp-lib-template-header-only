@@ -1,4 +1,4 @@
-#include "mb/cpp-lib-template/cpp-lib-template.hpp"
+#include "mb/cpp-lib-template-header-only/cpp-lib-template-header-only.hpp"
 
 #include "gtest/gtest.h"
 
